@@ -1,0 +1,259 @@
+/* -------------- Reset -------------- */
+
+@import url(reset.css);
+
+/* -------------- Reset -------------- */
+
+/* -------------- Fonts -------------- */
+
+@font-face {
+	font-family: Roboto;
+	src: url(/assets/fonts/Roboto-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(/assets/fonts/Roboto-Bold.ttf);
+	font-weight: 700;
+}
+
+/* -------------- Fonts -------------- */
+
+/* -------------- Variables -------------- */
+
+:root {
+	--tomato: #ff6257;
+	--dark-slate-grey: #242742;
+	--charcoal-grey: #36384e;
+	--grey: #9294a0;
+	--white: #ffffff;
+  /* gradient */
+  --first-color: #fd5477;
+  --second-color: #ff693e;
+}
+
+/* -------------- Variables -------------- */
+
+/* -------------- Global -------------- */
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-weight: 400;
+	font-size: 1.6rem;
+	font-family: Roboto;
+	background: var(--charcoal-grey);
+  color: var(--dark-slate-grey);
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: grid;
+	place-content: center;
+}
+
+/* -------------- Global -------------- */
+
+/* -------------- Newsletter -------------- */
+
+.newsletter {
+  max-width: 82rem;
+  width: 100%;
+  background: var(--white);
+  border-radius: clamp(2rem, 5vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1rem, 5vw, 2rem);
+  box-shadow: 0 0 1.5rem 2rem rgba(0, 0, 0, .1);
+  gap: clamp(3.5rem, 5vw, 5.6rem);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.newsletter__content {
+  flex: 0 1 35rem;
+  padding-left: clamp(1rem, 1vw, 3.6rem);
+}
+
+.newsletter__title {
+  font-size: clamp(3rem, 5vw, 4.7rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.newsletter__join-text {
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.newsletter__list-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.features-list {
+  margin-bottom: 3.7rem;
+}
+
+.features-list__item {
+  padding-left: 3.3rem;
+  position: relative;
+}
+
+.features-list__item::before {
+  content: '';
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  background: url(/assets/images/icon-list.svg);
+}
+
+.features-list__link {
+  font-size: 1.4rem;
+}
+
+/* .newsletter__form {
+} */
+
+.newsletter__label {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.newsletter__input-email,
+.newsletter__submit {
+  width: 100%;
+}
+
+.newsletter__input-email {
+  margin-top: 0.7rem;
+  height: 4.7rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.7rem;
+  padding: 0 2rem;
+  margin-bottom: 2.1rem;
+}
+
+.newsletter__input-email::placeholder {
+  color: var(--grey);
+}
+
+.newsletter__input-email:focus {
+  outline: 1px solid var(--tomato);
+}
+
+.valid {
+  background: #ffe8e6;
+  border: 1px solid #cb8a87;
+  color: var(--tomato);
+}
+
+.success__dismiss,
+.newsletter__submit {
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  height: 4.9rem;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.success__dismiss:hover,
+.newsletter__submit:hover {
+  background: linear-gradient(to bottom right, var(--first-color), var(--second-color));
+  box-shadow: 0 1.5rem 2.5rem .5rem #ff625750;
+}
+
+.newsletter__image {
+  flex: 0 1 35.1rem;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.newsletter__picture {
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter__picture > img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 0;
+    min-height: 100dvh;
+    justify-content: space-between;
+  }
+
+  .newsletter__content {
+    padding: 2rem;
+    flex: initial;
+  }
+
+  .newsletter__image {
+    width: 100%;
+    flex: initial;
+  }
+}
+
+/* -------------- Newsletter -------------- */
+
+/* -------------- Success Block -------------- */
+
+.success {
+  max-width: 44.4rem;
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 4.2rem 5.7rem 5.7rem;
+}
+
+.success__icon {
+  margin-bottom: 3.6rem;
+}
+
+.success__title {
+  margin-bottom: 2.5rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.success__text {
+  margin-bottom: 3.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .success {
+    padding: 4rem 2.4rem;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .success__dismiss {
+    margin-top: auto;
+  }
+}
+
+/* -------------- Success Block -------------- */

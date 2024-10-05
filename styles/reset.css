@@ -1,0 +1,52 @@
+/* -------------- Reset -------------- */
+
+html {
+	box-sizing: border-box;
+	font-display: fallback;
+}
+
+* {
+	box-sizing: inherit;
+	border: 0;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+button {
+	background: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+mark {
+	background: none;
+}
+
+/* -------------- Reset -------------- */
